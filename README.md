@@ -1,6 +1,6 @@
 # 26_rmuc_nav
 
-在 [pb2025_sentry_nav](https://github.com/SMBU-PolarBear-Robotics-Team/pb2025_sentry_nav) 基础上新增了三个功能包：高程地图构建（`elevation_bridge`）、扇区可视化（`sector_visualization`）、扩展地形分析（`terrain_analysis_ext`）。代码仍处于完善阶段，可能存在 bug，完善后欢迎提 PR。
+在 [pb2025_sentry_nav](https://github.com/SMBU-PolarBear-Robotics-Team/pb2025_sentry_nav) 基础上新增了三个功能包：高程地图构建（`elevation_bridge`）、扇区可视化（`sector_visualization`）、扩展地形分析（`terrain_analysis_ext`）。仍有完善的地方，望多多pull requests
 
 
 ---
