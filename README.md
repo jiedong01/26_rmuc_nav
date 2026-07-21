@@ -2,7 +2,6 @@
 
 在 [pb2025_sentry_nav](https://github.com/SMBU-PolarBear-Robotics-Team/pb2025_sentry_nav) 基础上新增了三个功能包：高程地图构建（`elevation_bridge`）、扇区可视化（`sector_visualization`）、扩展地形分析（`terrain_analysis_ext`）。
 
-原始导航栈的代码直接平铺在本仓库中，可以作为一个独立的 ROS2 工作空间使用。
 
 ---
 
@@ -169,14 +168,14 @@ ros2 launch pb2025_nav_bringup rm_navigation_simulation_launch.py \
 ros2 run nav2_map_server map_saver_cli -f <MAP_NAME> --ros-args -r __ns:=/red_standard_robot1
 ```
 
-**同时启动高程地图（新增）：**
+**同时启动高程地图：**
 
 ```bash
 # 另开终端
 ros2 launch elevation_bridge elevation_bridge_launch.py use_sim_time:=true
 ```
 
-**同时启动扇区可视化（新增）：**
+**同时启动扇区可视化：**
 
 ```bash
 ros2 launch sector_visualization sector_visualization.launch.py
@@ -201,7 +200,7 @@ ros2 launch pb2025_nav_bringup rm_navigation_reality_launch.py \
   use_robot_state_pub:=True
 ```
 
-**同时启动高程地图（新增）：**
+**同时启动高程地图：**
 
 ```bash
 ros2 launch elevation_bridge elevation_bridge_launch.py \
@@ -236,7 +235,7 @@ ros2 launch elevation_bridge elevation_bridge_launch.py \
 
 ---
 
-## 关于原始导航栈
+## 导航栈
 
 原始代码来自北极熊战队 [pb2025_sentry_nav](https://github.com/SMBU-PolarBear-Robotics-Team/pb2025_sentry_nav)，基于 NAV2 框架，使用 Livox mid360 倾斜侧放，`point_lio` 里程计，`small_gicp` 重定位，`pb_omni_pid_pursuit_controller` 路径跟踪。
 
